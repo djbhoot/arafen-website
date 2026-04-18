@@ -270,16 +270,24 @@ section:nth-child(even){background:var(--bg-2);}
 .skill-box-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:-.2px;}
 .skill-box-cloud{display:flex;flex-wrap:wrap;gap:10px;}
 
-/* ── EDUCATION ── */
-.ecards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:860px;}
-.ecard{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:all .3s var(--ease);position:relative;overflow:hidden;}
-.ecard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:0;transition:opacity .3s;}
-.ecard:hover{border-color:rgba(99,179,237,.3);transform:translateY(-4px);}
-.ecard:hover::after{opacity:1;}
-.eico{width:46px;height:46px;border-radius:11px;background:var(--blue-dim);border:1px solid rgba(99,179,237,.2);display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px;}
-.edeg{font-size:16px;font-weight:700;color:#fff;margin-bottom:5px;}
-.esc{font-size:14px;color:var(--blue);margin-bottom:4px;font-weight:500;}
-.eyr{font-size:13px;color:var(--text-3);}
+/* TESTIMONIALS */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;max-width:1100px;}
+.tcard{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all .3s var(--ease);position:relative;overflow:hidden;display:flex;flex-direction:column;gap:16px;}
+.tcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:0;transition:opacity .3s;}
+.tcard:hover{border-color:rgba(99,179,237,.28);transform:translateY(-4px);}
+.tcard:hover::before{opacity:1;}
+.tqmark{font-size:44px;line-height:1;color:var(--blue);opacity:.3;font-family:Georgia,serif;margin-bottom:-10px;}
+.tquote{font-size:15px;color:var(--text);line-height:1.75;font-style:italic;flex:1;}
+.tauthor{display:flex;align-items:center;gap:12px;border-top:1px solid var(--border);padding-top:16px;margin-top:auto;}
+.tavatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0;border:1px solid var(--border);}
+.av-b{background:rgba(99,179,237,.14);color:var(--blue);border-color:rgba(99,179,237,.25);}
+.av-t{background:rgba(79,209,197,.14);color:var(--teal);border-color:rgba(79,209,197,.25);}
+.av-p{background:rgba(183,148,244,.14);color:var(--purple);border-color:rgba(183,148,244,.25);}
+.av-k{background:rgba(246,135,179,.14);color:var(--pink);border-color:rgba(246,135,179,.25);}
+.av-a{background:rgba(246,173,85,.14);color:#f6ad55;border-color:rgba(246,173,85,.25);}
+.tname{font-size:14px;font-weight:700;color:#fff;}
+.trole{font-size:12px;color:var(--text-3);margin-top:2px;}
+.tsource{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);background:rgba(99,179,237,.08);border:1px solid rgba(99,179,237,.15);border-radius:100px;padding:2px 8px;margin-top:4px;display:inline-block;}
 
 /* ── CONTACT ── */
 #contact{text-align:center;}
@@ -345,7 +353,7 @@ footer p{color:var(--text-3);font-size:13px;}
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="blog.html">Blog</a></li>
   </ul>
@@ -610,13 +618,78 @@ footer p{color:var(--text-3);font-size:13px;}
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="stag rv">Education</div>
-  <h2 class="sh rv d1">Academic <span>background</span></h2>
-  <div class="ecards">
-    <div class="ecard rv d2"><div class="eico">🎓</div><div class="edeg">Technology Entrepreneurship</div><div class="esc">Harvard University</div><div class="eyr">2020 · United States</div></div>
-    <div class="ecard rv d3"><div class="eico">📘</div><div class="edeg">BBA. Marketing & International Business</div><div class="esc">Independent University, Bangladesh</div><div class="eyr">2013 – 2017</div></div>
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="stag rv">What colleagues say</div>
+  <h2 class="sh rv d1">Trusted by teams that <span>ship results</span></h2>
+  <p class="ss rv d2">Recommendations from managers, peers, and collaborators across Xylo AI, Tappstr, and beyond.</p>
+  <div class="tgrid">
+
+    <div class="tcard rv d1">
+      <div class="tqmark">"</div>
+      <p class="tquote">He was exceptional at content writing and demand generation. He also has a fantastic attitude and is an all-around delight to work with. I recommend him to anyone looking for a savvy marketer.</p>
+      <div class="tauthor">
+        <div class="tavatar av-b">ML</div>
+        <div>
+          <div class="tname">Michael Lisi</div>
+          <div class="trole">Strategy and Growth Architect, managed Arafen at Xylo AI</div>
+          <div class="tsource">LinkedIn · Oct 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tcard rv d2">
+      <div class="tqmark">"</div>
+      <p class="tquote">He is full of new, practical strategies to improve our reach and conversion. His ideas are creative, but he always follows them up with clear next steps, and executes in a timely manner. Arafen is a critical asset to Xylo's growth team.</p>
+      <div class="tauthor">
+        <div class="tavatar av-t">DB</div>
+        <div>
+          <div class="tname">David Barta, CFA, CFP</div>
+          <div class="trole">Financial Planning Specialist, senior to Arafen at Xylo AI</div>
+          <div class="tsource">LinkedIn · Oct 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tcard rv d3">
+      <div class="tqmark">"</div>
+      <p class="tquote">What consistently stood out was his ability to bridge the gap between creative marketing strategy and execution. He's proactive, adaptable, and always willing to go the extra mile to ensure quality results.</p>
+      <div class="tauthor">
+        <div class="tavatar av-p">WK</div>
+        <div>
+          <div class="tname">Werner Koegelenberg</div>
+          <div class="trole">LinkedIn Top Voice (AI), managed Arafen at Tappstr</div>
+          <div class="tsource">LinkedIn · Oct 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tcard rv d1">
+      <div class="tqmark">"</div>
+      <p class="tquote">His attention to detail, response to feedback, and beautifully built campaigns were great lead magnets that put the sales team in front of several opportunities. Reliable for sure, and talented too.</p>
+      <div class="tauthor">
+        <div class="tavatar av-k">CA</div>
+        <div>
+          <div class="tname">Chris Appicelli</div>
+          <div class="trole">Healthcare Tech and AI Sales, worked with Arafen at Xylo AI</div>
+          <div class="tsource">LinkedIn · Oct 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tcard rv d2">
+      <div class="tqmark">"</div>
+      <p class="tquote">He handled both the marketing and communication-strategy side, but also understands how the technology works. That's pretty rare. He's someone you can deploy across different roles in AI projects because he can bridge different disciplines.</p>
+      <div class="tauthor">
+        <div class="tavatar av-a">DV</div>
+        <div>
+          <div class="tname">Daniel Verloop</div>
+          <div class="trole">Agentic Engineer, EU AI Act and GDPR specialist</div>
+          <div class="tsource">LinkedIn · Oct 2025</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
