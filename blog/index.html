@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM & Growth Marketing Blog | Arafen Kabir Shovon</title>
+<meta name="description" content="Practical GTM strategy, outbound pipeline, SEO, and demand generation insights for B2B SaaS founders and marketing leaders. Written by Arafen Kabir Shovon.">
+<meta name="keywords" content="GTM strategy B2B SaaS, outbound pipeline, demand generation, SEO for SaaS, growth marketing, cold email, ICP definition, HubSpot, Apollo, AI marketing">
+<meta name="author" content="Arafen Kabir Shovon">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arafen.netlify.app/blog.html">
+<meta name="theme-color" content="#050810">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GTM & Growth Marketing Blog | Arafen Kabir Shovon">
+<meta property="og:description" content="Practical GTM, outbound pipeline, SEO, and demand generation insights for B2B SaaS marketers and founders.">
+<meta property="og:url" content="https://arafen.netlify.app/blog.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "GTM & Growth Marketing Blog by Arafen Kabir Shovon",
+  "url": "https://arafen.netlify.app/blog.html",
+  "description": "Practical insights on GTM strategy, outbound pipeline, demand generation, and SEO for B2B SaaS and AI startups.",
+  "author": {
+    "@type": "Person",
+    "name": "Arafen Kabir Shovon",
+    "url": "https://arafen.netlify.app/"
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+  --bg:#050810;--bg-2:#070c17;--bg-card:rgba(255,255,255,0.03);--bg-card-hover:rgba(255,255,255,0.055);
+  --border:rgba(255,255,255,0.07);--border-blue:rgba(99,179,237,0.35);
+  --blue:#63b3ed;--blue-v:#4299e1;--blue-dim:rgba(99,179,237,0.1);
+  --teal:#4fd1c5;--purple:#b794f4;--pink:#f687b3;--amber:#f6ad55;--green:#68d391;
+  --text:#e2e8f0;--text-2:#718096;--text-3:#4a5568;
+  --font:'Space Grotesk','Inter',sans-serif;--ease:cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7;}
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none;}
+.cglow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(99,179,237,0.045) 0%,transparent 70%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);transition:left .1s,top .1s;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:66px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:rgba(5,8,16,0.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:background .3s;}
+nav.sc{background:rgba(5,8,16,0.97);}
+.nl{font-size:19px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.5px;display:flex;align-items:center;gap:9px;}
+.ndot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));animation:breathe 3s ease-in-out infinite;}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.5);opacity:.6;}}
+.nlinks{display:flex;gap:4px;list-style:none;}
+.nlinks a{color:var(--text-2);text-decoration:none;font-size:14px;font-weight:500;padding:7px 14px;border-radius:8px;transition:all .2s;}
+.nlinks a:hover,.nlinks a.active{color:#fff;background:rgba(255,255,255,0.06);}
+.nlinks a.active{color:var(--blue);}
+.ncta{background:linear-gradient(135deg,var(--blue-v),#3182ce);color:#fff;padding:9px 22px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;transition:all .2s;box-shadow:0 0 22px rgba(99,179,237,.2);}
+.ncta:hover{transform:translateY(-1px);box-shadow:0 0 32px rgba(99,179,237,.38);}
+
+/* PAGE HEADER */
+.blog-header{padding:120px 6% 60px;position:relative;z-index:2;max-width:1200px;margin:0 auto;}
+.page-aurora{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 10% 40%,rgba(99,179,237,.055) 0%,transparent 55%),
+             radial-gradient(ellipse 50% 60% at 88% 20%,rgba(159,122,234,.04) 0%,transparent 55%);
+  animation:aur 16s ease-in-out infinite alternate;}
+@keyframes aur{0%{opacity:.7;transform:scale(1);}100%{opacity:1;transform:scale(1.05);}}
+
+.blog-eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:20px;}
+.blog-pill{background:rgba(99,179,237,.1);border:1px solid rgba(99,179,237,.22);color:var(--blue);padding:6px 16px;border-radius:100px;font-size:13px;font-weight:600;letter-spacing:.4px;}
+.blog-title{font-size:clamp(36px,5vw,62px);font-weight:900;letter-spacing:-2px;color:#fff;line-height:1.05;margin-bottom:16px;}
+.blog-title span{background:linear-gradient(120deg,var(--blue),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.blog-sub{font-size:17px;color:var(--text-2);max-width:580px;line-height:1.75;}
+
+/* FILTERS */
+.blog-filters{padding:0 6% 48px;position:relative;z-index:2;max-width:1200px;margin:0 auto;}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;}
+.ftag{padding:7px 16px;border-radius:8px;font-size:13px;font-weight:600;border:1px solid var(--border);color:var(--text-2);cursor:pointer;transition:all .2s;background:transparent;font-family:var(--font);}
+.ftag:hover{border-color:var(--blue);color:var(--blue);}
+.ftag.on{background:var(--blue-dim);border-color:rgba(99,179,237,.4);color:var(--blue);}
+
+/* FEATURED POST */
+.blog-main{padding:0 6% 80px;position:relative;z-index:2;max-width:1200px;margin:0 auto;}
+.featured-post{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:20px;
+  overflow:hidden;margin-bottom:48px;display:grid;grid-template-columns:1fr 1fr;
+  transition:border-color .3s var(--ease);text-decoration:none;color:inherit;
+}
+.featured-post:hover{border-color:var(--border-blue);}
+.featured-img{
+  background:linear-gradient(135deg,rgba(99,179,237,.12) 0%,rgba(159,122,234,.12) 50%,rgba(79,209,197,.08) 100%);
+  display:flex;align-items:center;justify-content:center;min-height:280px;padding:32px;
+  position:relative;overflow:hidden;
+}
+.featured-img-inner{
+  width:100%;height:220px;border-radius:12px;
+  background:linear-gradient(135deg,rgba(99,179,237,.08),rgba(159,122,234,.06));
+  border:1px solid rgba(99,179,237,.15);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.featured-img-icon{font-size:56px;line-height:1;}
+.featured-img-decor{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(99,179,237,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(99,179,237,.06) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.featured-content{padding:36px 36px 36px 32px;display:flex;flex-direction:column;justify-content:space-between;}
+.featured-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--blue);margin-bottom:16px;padding:3px 10px;
+  background:rgba(99,179,237,.08);border-radius:100px;width:fit-content;
+}
+.post-cat-badge{width:fit-content;}
+.featured-post-title{font-size:clamp(20px,2.5vw,28px);font-weight:800;color:#fff;line-height:1.2;letter-spacing:-.5px;margin-bottom:14px;}
+.featured-post-excerpt{font-size:15px;color:var(--text-2);line-height:1.75;margin-bottom:24px;}
+.post-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.post-date{font-size:12px;color:var(--text-3);font-weight:500;}
+.post-read{font-size:12px;color:var(--text-3);}
+.post-read-link{color:var(--blue);font-size:13px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:5px;margin-top:auto;transition:gap .2s;}
+.post-read-link:hover{gap:9px;}
+
+/* POST GRID */
+.post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;}
+.post-card{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:16px;
+  overflow:hidden;transition:all .3s var(--ease);text-decoration:none;color:inherit;
+  display:flex;flex-direction:column;
+}
+.post-card:hover{border-color:var(--border-blue);transform:translateY(-4px);}
+.post-card-img{
+  height:160px;display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.post-card-img-decor{position:absolute;inset:0;background-image:linear-gradient(rgba(99,179,237,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(99,179,237,.05) 1px,transparent 1px);background-size:28px 28px;}
+.post-card-icon{font-size:40px;position:relative;z-index:1;}
+.post-card-body{padding:22px 24px;display:flex;flex-direction:column;flex:1;}
+.post-cat{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;padding:3px 10px;border-radius:100px;width:fit-content;}
+.cat-gtm{color:var(--blue);background:rgba(99,179,237,.1);}
+.cat-seo{color:var(--teal);background:rgba(79,209,197,.1);}
+.cat-ai{color:var(--purple);background:rgba(183,148,244,.1);}
+.cat-demand{color:var(--amber);background:rgba(246,173,85,.1);}
+.cat-outbound{color:var(--pink);background:rgba(246,135,179,.1);}
+.cat-ops{color:var(--green);background:rgba(104,211,145,.1);}
+.post-card-title{font-size:17px;font-weight:700;color:#fff;line-height:1.3;letter-spacing:-.3px;margin-bottom:10px;}
+.post-card-excerpt{font-size:14px;color:var(--text-2);line-height:1.7;flex:1;margin-bottom:18px;}
+.post-card-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:14px;margin-top:auto;}
+.post-card-meta{font-size:12px;color:var(--text-3);}
+.post-card-arrow{color:var(--blue);font-size:16px;transition:transform .2s;}
+.post-card:hover .post-card-arrow{transform:translateX(4px);}
+
+/* FOOTER */
+footer{background:var(--bg-2);border-top:1px solid var(--border);padding:30px 6%;text-align:center;position:relative;z-index:2;}
+footer p{color:var(--text-3);font-size:13px;}
+.footer-links{display:flex;gap:20px;justify-content:center;margin-bottom:12px;flex-wrap:wrap;}
+.footer-links a{color:var(--text-3);font-size:13px;text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--blue);}
+
+/* LINKEDIN FLOAT */
+.lnfloat{position:fixed;bottom:30px;right:30px;z-index:300;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#0a66c2,#0d83d6);color:#fff;padding:13px 22px;border-radius:50px;text-decoration:none;font-size:14px;font-weight:700;box-shadow:0 8px 32px rgba(10,102,194,.42);transition:all .3s var(--ease);animation:floatin .8s 1.2s both;font-family:var(--font);}
+@keyframes floatin{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+.lnfloat:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 16px 44px rgba(10,102,194,.55);}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
+.rv.on{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+
+@media(max-width:768px){
+  .nlinks{display:none;}
+  .featured-post{grid-template-columns:1fr;}
+  .featured-img{min-height:180px;}
+  .featured-content{padding:24px;}
+  .lnfloat{bottom:18px;right:18px;padding:11px 16px;font-size:13px;}
+}
+</style>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+<div class="cglow" id="cg"></div>
+<div class="page-aurora"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nl"><span class="ndot"></span>Arafen Shovon</a>
+  <ul class="nlinks">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+  </ul>
+  <a href="index.html#contact" class="ncta">Get in touch →</a>
+</nav>
+
+<!-- BLOG HEADER -->
+<div class="blog-header rv">
+  <div class="blog-eyebrow"><span class="blog-pill">✦ Insights on GTM & Growth</span></div>
+  <h1 class="blog-title">Real-world <span>GTM playbooks</span><br>for B2B SaaS</h1>
+  <p class="blog-sub">Practical frameworks on outbound pipeline, demand generation, SEO, and go-to-market strategy — written from the trenches of scaling B2B SaaS and fintech startups.</p>
+</div>
+
+<!-- FILTERS -->
+<div class="blog-filters rv d1">
+  <div class="filter-row">
+    <button class="ftag on" data-f="all">All posts</button>
+    <button class="ftag" data-f="gtm">GTM Strategy</button>
+    <button class="ftag" data-f="outbound">Outbound</button>
+    <button class="ftag" data-f="seo">SEO</button>
+    <button class="ftag" data-f="demand">Demand Gen</button>
+    <button class="ftag" data-f="ai">AI & Automation</button>
+  </div>
+</div>
+
+<!-- BLOG CONTENT -->
+<div class="blog-main">
+
+  <!-- FEATURED -->
+  <a href="blog/b2b-gtm-strategy-framework.html" class="featured-post rv d1" data-category="gtm">
+    <div class="featured-img">
+      <div class="featured-img-inner">
+        <div class="featured-img-decor"></div>
+        <div class="featured-img-icon">🚀</div>
+      </div>
+    </div>
+    <div class="featured-content">
+      <div>
+        <div class="featured-badge">✦ Featured post</div>
+        <div class="post-cat-badge post-cat cat-gtm">GTM Strategy</div>
+        <h2 class="featured-post-title">How to Build a B2B GTM Strategy from Scratch: The Framework I Use at Every Stage</h2>
+        <p class="featured-post-excerpt">Most early-stage SaaS companies jump into tactics before they've answered the foundational questions — who is the ICP, what motion fits the product, and how do acquisition, retention, and expansion interconnect. Here's the full framework I use to build GTM from the ground up.</p>
+      </div>
+      <div>
+        <div class="post-meta">
+          <span class="post-date">April 2025</span>
+          <span class="post-read">· 9 min read</span>
+        </div>
+        <div class="post-read-link" style="margin-top:14px;">Read article →</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- POST GRID -->
+  <div class="post-grid">
+
+    <a href="#" class="post-card rv d1" data-category="outbound">
+      <div class="post-card-img" style="background:linear-gradient(135deg,rgba(246,135,179,.07),rgba(159,122,234,.06));">
+        <div class="post-card-img-decor"></div>
+        <div class="post-card-icon">📨</div>
+      </div>
+      <div class="post-card-body">
+        <div class="post-cat cat-outbound">Outbound</div>
+        <h3 class="post-card-title">How to Build a Cold Email Sequence That Actually Gets Replies in 2025</h3>
+        <p class="post-card-excerpt">Volume alone won't save you. The playbook has shifted — hyper-personalization, multi-touch cadences, and signal-based triggers are now the baseline. Here's how I structure sequences that book meetings.</p>
+        <div class="post-card-footer">
+          <span class="post-card-meta">March 2025 · 7 min read</span>
+          <span class="post-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="post-card rv d2" data-category="seo">
+      <div class="post-card-img" style="background:linear-gradient(135deg,rgba(79,209,197,.07),rgba(99,179,237,.06));">
+        <div class="post-card-img-decor"></div>
+        <div class="post-card-icon">🔍</div>
+      </div>
+      <div class="post-card-body">
+        <div class="post-cat cat-seo">SEO</div>
+        <h3 class="post-card-title">B2B SaaS SEO: The Content Strategy That Actually Drives Pipeline (Not Just Traffic)</h3>
+        <p class="post-card-excerpt">Most SaaS SEO programs optimise for traffic and stop there. The ones that win tie every piece of content to ICP intent, funnel stage, and conversion outcome. Here's the framework that works.</p>
+        <div class="post-card-footer">
+          <span class="post-card-meta">March 2025 · 8 min read</span>
+          <span class="post-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="post-card rv d3" data-category="ai">
+      <div class="post-card-img" style="background:linear-gradient(135deg,rgba(183,148,244,.07),rgba(99,179,237,.06));">
+        <div class="post-card-img-decor"></div>
+        <div class="post-card-icon">🤖</div>
+      </div>
+      <div class="post-card-body">
+        <div class="post-cat cat-ai">AI & Automation</div>
+        <h3 class="post-card-title">Using Clay, Apollo, and AI Together: My Outbound GTM Stack for 2025</h3>
+        <p class="post-card-excerpt">The best outbound teams aren't sending more emails — they're sending smarter ones. Here's how I combine Clay enrichment, Apollo sequencing, and AI-generated personalisation into one repeatable system.</p>
+        <div class="post-card-footer">
+          <span class="post-card-meta">February 2025 · 6 min read</span>
+          <span class="post-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="post-card rv d1" data-category="demand">
+      <div class="post-card-img" style="background:linear-gradient(135deg,rgba(246,173,85,.07),rgba(99,179,237,.05));">
+        <div class="post-card-img-decor"></div>
+        <div class="post-card-icon">📊</div>
+      </div>
+      <div class="post-card-body">
+        <div class="post-cat cat-demand">Demand Gen</div>
+        <h3 class="post-card-title">Demand Generation vs. Lead Generation: What B2B SaaS Teams Keep Getting Wrong</h3>
+        <p class="post-card-excerpt">Chasing form fills and gating everything is a relic. Modern demand gen is about creating buying intent before your prospect ever hits your site. Here's how to think about and build it correctly.</p>
+        <div class="post-card-footer">
+          <span class="post-card-meta">February 2025 · 7 min read</span>
+          <span class="post-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="post-card rv d2" data-category="gtm">
+      <div class="post-card-img" style="background:linear-gradient(135deg,rgba(99,179,237,.08),rgba(79,209,197,.06));">
+        <div class="post-card-img-decor"></div>
+        <div class="post-card-icon">🎯</div>
+      </div>
+      <div class="post-card-body">
+        <div class="post-cat cat-gtm">GTM Strategy</div>
+        <h3 class="post-card-title">ICP Definition That Goes Beyond Job Title: How to Build a Real Ideal Customer Profile</h3>
+        <p class="post-card-excerpt">Most ICPs read like a LinkedIn filter — "VP of Sales at a 50-250 person SaaS company." That's a persona, not a customer profile. Here's how to build an ICP that actually drives targeting decisions.</p>
+        <div class="post-card-footer">
+          <span class="post-card-meta">January 2025 · 8 min read</span>
+          <span class="post-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="post-card rv d3" data-category="seo">
+      <div class="post-card-img" style="background:linear-gradient(135deg,rgba(79,209,197,.07),rgba(104,211,145,.05));">
+        <div class="post-card-img-decor"></div>
+        <div class="post-card-icon">🏗️</div>
+      </div>
+      <div class="post-card-body">
+        <div class="post-cat cat-seo">SEO</div>
+        <h3 class="post-card-title">Technical SEO Audit for B2B SaaS: The 12-Point Checklist That Unlocks Organic Growth</h3>
+        <p class="post-card-excerpt">Fixing content strategy while your technical foundation is broken is like pouring water into a leaking bucket. Run through this audit first — it's the foundation everything else is built on.</p>
+        <div class="post-card-footer">
+          <span class="post-card-meta">January 2025 · 10 min read</span>
+          <span class="post-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="post-card rv d1" data-category="outbound">
+      <div class="post-card-img" style="background:linear-gradient(135deg,rgba(246,135,179,.07),rgba(246,173,85,.05));">
+        <div class="post-card-img-decor"></div>
+        <div class="post-card-icon">🔗</div>
+      </div>
+      <div class="post-card-body">
+        <div class="post-cat cat-outbound">Outbound</div>
+        <h3 class="post-card-title">LinkedIn Outreach That Converts: How to Start Conversations Without Being Ignored</h3>
+        <p class="post-card-excerpt">Most LinkedIn messages fail because they open with a pitch, not a reason for the recipient to care. Here's the message framework, timing strategy, and follow-up approach I use to get real reply rates.</p>
+        <div class="post-card-footer">
+          <span class="post-card-meta">December 2024 · 6 min read</span>
+          <span class="post-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="post-card rv d2" data-category="demand">
+      <div class="post-card-img" style="background:linear-gradient(135deg,rgba(246,173,85,.07),rgba(159,122,234,.06));">
+        <div class="post-card-img-decor"></div>
+        <div class="post-card-icon">💡</div>
+      </div>
+      <div class="post-card-body">
+        <div class="post-cat cat-demand">Demand Gen</div>
+        <h3 class="post-card-title">Marketing Attribution for B2B SaaS: How to Build a Framework That Actually Influences Decisions</h3>
+        <p class="post-card-excerpt">Last-click attribution is lying to you. But multi-touch models can be just as misleading if poorly configured. Here's how I build attribution frameworks that tell the real story of what's driving revenue.</p>
+        <div class="post-card-footer">
+          <span class="post-card-meta">December 2024 · 9 min read</span>
+          <span class="post-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="post-card rv d3" data-category="ai">
+      <div class="post-card-img" style="background:linear-gradient(135deg,rgba(183,148,244,.08),rgba(246,135,179,.05));">
+        <div class="post-card-img-decor"></div>
+        <div class="post-card-icon">⚡</div>
+      </div>
+      <div class="post-card-body">
+        <div class="post-cat cat-ai">AI & Automation</div>
+        <h3 class="post-card-title">How I Built an AI-Powered GTM Workflow That Replaced 3 Manual Processes</h3>
+        <p class="post-card-excerpt">From ICP research to personalised outreach to reporting — AI is reshaping what a 1-person GTM function can output. Here's the exact workflow I built and the tools that power it.</p>
+        <div class="post-card-footer">
+          <span class="post-card-meta">November 2024 · 7 min read</span>
+          <span class="post-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="https://www.linkedin.com/in/shovonarafen" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p>© 2025 Arafen Kabir Shovon · GTM & Growth Marketing Manager</p>
+</footer>
+
+<!-- LINKEDIN FLOAT -->
+<a href="https://www.linkedin.com/in/shovonarafen" target="_blank" rel="noopener" class="lnfloat">
+  <svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+  Connect on LinkedIn
+</a>
+
+<script>
+/* STARS */
+(function(){
+  const c=document.getElementById('stars'),x=c.getContext('2d');let s=[];
+  function rs(){c.width=window.innerWidth;c.height=window.innerHeight;}
+  function is(){s=[];for(let i=0;i<160;i++)s.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+0.15,o:Math.random()*.45+.07,sp:Math.random()*.22+.05,d:Math.random()>.5?1:-1});}
+  function dr(){x.clearRect(0,0,c.width,c.height);s.forEach(p=>{p.o+=p.sp*.007*p.d;if(p.o>.55||p.o<.04)p.d*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle=`rgba(180,215,255,${p.o})`;x.fill();});requestAnimationFrame(dr);}
+  window.addEventListener('resize',()=>{rs();is();});rs();is();dr();
+})();
+
+/* CURSOR */
+document.addEventListener('mousemove',e=>{const g=document.getElementById('cg');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px';});
+
+/* NAV */
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('sc',scrollY>40);});
+
+/* REVEAL */
+(function(){
+  const ob=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:.08});
+  document.querySelectorAll('.rv').forEach(el=>ob.observe(el));
+})();
+
+/* FILTERS */
+const cards=[...document.querySelectorAll('.post-card')];
+const featured=document.querySelector('.featured-post');
+document.querySelectorAll('.ftag').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.ftag').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    const f=btn.dataset.f;
+    cards.forEach(c=>{
+      const cat=c.dataset.category;
+      c.style.display=(f==='all'||cat===f)?'flex':'none';
+    });
+    if(featured){
+      const fcat=featured.dataset.category;
+      featured.style.display=(f==='all'||fcat===f)?'grid':'none';
+    }
+  });
+});
+
+</script>
+</body>
+</html>
