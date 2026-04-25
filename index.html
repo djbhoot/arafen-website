@@ -173,8 +173,8 @@ nav.sc{background:rgba(5,8,16,0.95);}
 
 .hname{font-size:clamp(50px,7.5vw,92px);font-weight:900;line-height:.95;letter-spacing:-3px;margin-bottom:22px;}
 .hn1{display:block;color:#fff;}
-.hn2{display:block;background:linear-gradient(120deg,var(--blue) 0%,var(--teal) 45%,var(--purple) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:gsh 7s ease-in-out infinite alternate;}
-@keyframes gsh{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
+.hn2{display:inline;background:linear-gradient(90deg,var(--teal) 0%,#a0f0e8 18%,var(--blue) 35%,var(--purple) 52%,var(--blue) 68%,#a0f0e8 82%,var(--teal) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:250% 100%;animation:wave-lr 5s ease-in-out infinite;}
+@keyframes wave-lr{0%{background-position:100% 0%;}100%{background-position:0% 0%;}}
 
 .htag{font-size:clamp(17px,2.2vw,22px);color:var(--text-2);font-weight:400;margin-bottom:26px;letter-spacing:-.2px;}
 .htag strong{color:var(--text);font-weight:600;}
@@ -271,15 +271,7 @@ section:nth-child(even){background:var(--bg-2);}
 .skill-box-cloud{display:flex;flex-wrap:wrap;gap:10px;}
 
 /* ── EDUCATION ── */
-.ecards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:860px;}
-.ecard{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:all .3s var(--ease);position:relative;overflow:hidden;}
-.ecard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:0;transition:opacity .3s;}
-.ecard:hover{border-color:rgba(99,179,237,.3);transform:translateY(-4px);}
-.ecard:hover::after{opacity:1;}
-.eico{width:46px;height:46px;border-radius:11px;background:var(--blue-dim);border:1px solid rgba(99,179,237,.2);display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px;}
-.edeg{font-size:16px;font-weight:700;color:#fff;margin-bottom:5px;}
-.esc{font-size:14px;color:var(--blue);margin-bottom:4px;font-weight:500;}
-.eyr{font-size:13px;color:var(--text-3);}
+
 
 /* ── CONTACT ── */
 #contact{text-align:center;}
@@ -317,7 +309,7 @@ footer p{color:var(--text-3);font-size:13px;}
 .hero-layout{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;max-width:1100px;width:100%;}
 .hero-name-label{font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-2);margin-bottom:14px;}
 .hname{font-size:clamp(34px,4.8vw,58px);font-weight:900;line-height:1.08;letter-spacing:-1.5px;margin-bottom:20px;color:#fff;}
-.hn2{background:linear-gradient(120deg,var(--blue) 0%,var(--teal) 45%,var(--purple) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:gsh 7s ease-in-out infinite alternate;}
+.hn2{background:linear-gradient(90deg,var(--teal) 0%,#a0f0e8 18%,var(--blue) 35%,var(--purple) 52%,var(--blue) 68%,#a0f0e8 82%,var(--teal) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:250% 100%;animation:wave-lr 5s ease-in-out infinite;}
 .hero-photo-wrap{display:flex;flex-direction:column;align-items:center;gap:16px;flex-shrink:0;}
 .hero-photo-ring{position:relative;width:300px;height:300px;}
 .hero-photo-glow{position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(circle,rgba(99,179,237,0.18) 0%,rgba(79,209,197,0.08) 40%,transparent 70%);animation:aur 8s ease-in-out infinite alternate;pointer-events:none;}
@@ -345,7 +337,6 @@ footer p{color:var(--text-3);font-size:13px;}
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="/blog/">Blog</a></li>
   </ul>
@@ -358,7 +349,6 @@ footer p{color:var(--text-3);font-size:13px;}
   <div class="h-grid"></div>
   <div class="hero-layout">
     <div class="hc">
-      <div class="hbadge"><span class="hbadge-pill">✦ Available for new opportunities</span></div>
       <p class="hero-name-label">Arafen Kabir Shovon</p>
       <h1 class="hname">Helping B2B SaaS and AI Companies Build <span class="hn2">Predictable Growth</span></h1>
       <p class="htag">From GTM strategy and outbound pipeline to SEO and demand generation, I build growth systems that turn strong products into real traction.</p>
@@ -407,6 +397,7 @@ footer p{color:var(--text-3);font-size:13px;}
       <div class="pillar"><div class="pt">Multi-Channel Demand Generation</div><div class="pd">SEO, paid media, content, partnerships. integrated growth systems, not isolated campaigns. Consistent 50%+ organic traffic lifts across companies.</div></div>
       <div class="pillar"><div class="pt">AI-Powered GTM Workflows</div><div class="pd">Proprietary AI-assisted outbound campaigns and GTM workflow systems that lift reply rates, meeting booking, and pipeline velocity.</div></div>
       <div class="pillar"><div class="pt">Analytics & Attribution</div><div class="pd">Full attribution frameworks with GA4, Search Console, and Ahrefs. connecting marketing activity to revenue and sales velocity.</div></div>
+      <div class="pillar"><div class="pt">Partnership & Ecosystem Growth</div><div class="pd">Strategic alliances that open doors ads cannot. From SaaS co-sell partnerships to affiliate programs, the right partners accelerate pipeline without burning budget.</div></div>
     </div>
   </div>
 </section>
@@ -571,6 +562,7 @@ footer p{color:var(--text-3);font-size:13px;}
         <span class="spill">HubSpot</span>
         <span class="spill">Pipedrive CRM</span>
         <span class="spill">Zapier</span>
+        <span class="spill">n8n</span>
         <span class="spill">Trello</span>
         <span class="spill">Microsoft 365</span>
         <span class="spill">Google Workspace</span>
@@ -610,22 +602,12 @@ footer p{color:var(--text-3);font-size:13px;}
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="stag rv">Education</div>
-  <h2 class="sh rv d1">Academic <span>background</span></h2>
-  <div class="ecards">
-    <div class="ecard rv d2"><div class="eico">🎓</div><div class="edeg">Technology Entrepreneurship</div><div class="esc">Harvard University</div><div class="eyr">2020 · United States</div></div>
-    <div class="ecard rv d3"><div class="eico">📘</div><div class="edeg">BBA. Marketing & International Business</div><div class="esc">Independent University, Bangladesh</div><div class="eyr">2013 – 2017</div></div>
-  </div>
-</section>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="cwrap">
     <div class="stag rv">Get in touch</div>
     <h2 class="sh rv d1">Let's <span>connect</span></h2>
-    <p class="ss rv d2" style="margin:0 auto 8px;">Open to GTM, growth marketing, demand generation, SEO, and revenue marketing roles across Europe, North America, and remote-first teams. Let's talk.</p>
     <div class="ccard rv d3">
       <div class="clinks">
         <a href="mailto:shovon.arafen@gmail.com" class="clink">
@@ -642,7 +624,7 @@ footer p{color:var(--text-3);font-size:13px;}
 </section>
 
 <!-- FOOTER -->
-<footer><p>© 2025 Arafen Kabir Shovon · GTM & Growth Marketing Manager</p></footer>
+<footer><p>© 2026 Arafen Kabir Shovon · GTM & Growth Marketing Manager</p></footer>
 
 <!-- LINKEDIN FLOAT BUTTON -->
 <a href="https://www.linkedin.com/in/shovonarafen" target="_blank" rel="noopener" class="lnfloat">
@@ -656,14 +638,72 @@ footer p{color:var(--text-3);font-size:13px;}
   const c=document.getElementById('stars'),x=c.getContext('2d');
   let s=[];
   function rs(){c.width=window.innerWidth;c.height=window.innerHeight;}
-  function is(){s=[];for(let i=0;i<180;i++)s.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.3+0.15,o:Math.random()*.5+.08,sp:Math.random()*.25+.05,d:Math.random()>.5?1:-1});}
+  function is(){
+    s=[];
+    const totalH=Math.max(document.body.scrollHeight,window.innerHeight);
+    /* regular stars — small, fast twinkle */
+    for(let i=0;i<180;i++){
+      s.push({
+        x:Math.random()*c.width,
+        y:Math.random()*totalH,
+        r:Math.random()*1.2+0.15,
+        o:Math.random()*.45+.07,
+        sp:Math.random()*.22+.06,
+        d:Math.random()>.5?1:-1,
+        glow:false
+      });
+    }
+    /* glowing stars — ~22 spread evenly across full page height */
+    const glowColors=[
+      [99,179,237],   /* blue */
+      [79,209,197],   /* teal */
+      [183,148,244],  /* purple */
+      [99,179,237],   /* blue (weighted more) */
+      [79,209,197],
+    ];
+    for(let i=0;i<22;i++){
+      const col=glowColors[i%glowColors.length];
+      s.push({
+        x:Math.random()*c.width,
+        y:(i/22)*totalH + Math.random()*(totalH/22),
+        r:Math.random()*1.2+1.2,
+        o:Math.random()*.18+.08,
+        sp:Math.random()*.004+.0015,   /* very slow pulse */
+        d:Math.random()>.5?1:-1,
+        glow:true,
+        col:col,
+        maxO:Math.random()*.22+.14,   /* max opacity — stays subtle */
+        minO:.04
+      });
+    }
+  }
   function dr(){
     x.clearRect(0,0,c.width,c.height);
+    const scrollY=window.scrollY||0;
     s.forEach(p=>{
-      p.o+=p.sp*.007*p.d;
-      if(p.o>.6||p.o<.05)p.d*=-1;
-      x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);
-      x.fillStyle=`rgba(180,215,255,${p.o})`;x.fill();
+      /* only draw if near viewport (performance) */
+      const screenY=p.y-scrollY;
+      if(screenY<-60||screenY>c.height+60)return;
+      if(p.glow){
+        p.o+=p.sp*p.d;
+        if(p.o>=p.maxO||p.o<=p.minO)p.d*=-1;
+        /* soft glow halo */
+        const g=x.createRadialGradient(p.x,screenY,0,p.x,screenY,p.r*9);
+        g.addColorStop(0,`rgba(${p.col[0]},${p.col[1]},${p.col[2]},${p.o})`);
+        g.addColorStop(0.4,`rgba(${p.col[0]},${p.col[1]},${p.col[2]},${p.o*.35})`);
+        g.addColorStop(1,`rgba(${p.col[0]},${p.col[1]},${p.col[2]},0)`);
+        x.beginPath();x.arc(p.x,screenY,p.r*9,0,Math.PI*2);
+        x.fillStyle=g;x.fill();
+        /* bright core */
+        x.beginPath();x.arc(p.x,screenY,p.r,0,Math.PI*2);
+        x.fillStyle=`rgba(${p.col[0]},${p.col[1]},${p.col[2]},${Math.min(p.o*2.5,.55)})`;
+        x.fill();
+      } else {
+        p.o+=p.sp*.007*p.d;
+        if(p.o>.55||p.o<.04)p.d*=-1;
+        x.beginPath();x.arc(p.x,screenY,p.r,0,Math.PI*2);
+        x.fillStyle=`rgba(180,215,255,${p.o})`;x.fill();
+      }
     });
     requestAnimationFrame(dr);
   }
