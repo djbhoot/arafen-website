@@ -168,7 +168,7 @@ nav.sc{background:rgba(5,8,16,0.95);}
 .mega{
   position:absolute;top:42px;left:50%;transform:translateX(-50%);width:360px;background:#fff;color:#111;border-radius:8px;box-shadow:0 20px 80px rgba(0,0,0,.35);padding:24px;display:none;z-index:999;
 }
-.res-wrap.open .mega,.res-wrap:hover .mega{display:block;}
+.res-wrap:hover .mega{display:block;}
 .mega h4{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:#666;margin-bottom:16px;}
 .mega a{display:block;color:#111!important;background:transparent!important;padding:0!important;margin-bottom:18px;text-decoration:none;}
 .mega strong{display:block;font-size:18px;line-height:1.2;margin-bottom:4px;}
@@ -353,6 +353,24 @@ footer p{color:var(--text-3);font-size:13px;}
   .hero-photo{width:180px;height:180px;}
   .hero-photo-glow{inset:-14px;}
 }
+
+/* FREE GTM TOOLS NAV */
+.res-wrap{position:relative;}
+.res-trigger{color:var(--text-2);text-decoration:none;font-size:14px;font-weight:500;padding:7px 14px;border-radius:8px;transition:all .2s;background:transparent;border:0;font-family:var(--font);cursor:pointer;}
+.res-trigger:hover{color:#fff;background:rgba(255,255,255,0.06);}
+.mega{position:absolute;top:42px;left:50%;transform:translateX(-50%);width:360px;background:#fff;color:#111;border-radius:8px;box-shadow:0 20px 80px rgba(0,0,0,.35);padding:24px;display:none;grid-template-columns:1fr;gap:0;z-index:999;}
+.res-wrap:hover .mega{display:grid;}
+.mega h4{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:#666;margin-bottom:16px;}
+.mega a{display:block;color:#111!important;background:transparent!important;padding:0!important;margin-bottom:18px;text-decoration:none;}
+.mega strong{display:block;font-size:18px;line-height:1.2;margin-bottom:4px;}
+.mega span{display:block;font-size:14px;color:#666;line-height:1.45;}
+.mobile-menu-btn{display:none;background:rgba(255,255,255,.05);border:1px solid var(--border);color:#fff;border-radius:10px;padding:9px 12px;font-family:var(--font);font-weight:700;cursor:pointer;}
+.mobile-panel{display:none;position:fixed;top:66px;left:0;right:0;z-index:199;background:rgba(5,8,16,.97);border-bottom:1px solid var(--border);padding:18px 6%;box-shadow:0 20px 60px rgba(0,0,0,.35);}
+.mobile-panel a{display:block;color:var(--text);text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px;font-weight:600;}
+.mobile-panel a:last-child{border-bottom:0;}
+.mobile-panel.open{display:block;}
+@media(max-width:768px){.nlinks{display:none;}.mobile-menu-btn{display:block;}.ncta{display:none;}}
+
 </style>
 </head>
 <body>
@@ -366,31 +384,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="/#hero" class="nl"><span class="ndot"></span>Arafen Shovon</a>
+  <a href="/" class="nl"><span class="ndot"></span>Arafen Shovon</a>
   <ul class="nlinks">
     <li><a href="/#about">About</a></li>
     <li><a href="/#experience">Experience</a></li>
     <li><a href="/#skills">Skills</a></li>
     <li><a href="/#contact">Contact</a></li>
-
-<li class="res-wrap" id="resourcesMenu">
-  <button class="res-trigger" id="resourcesTrigger" type="button">Resources ▾</button>
-  <div class="mega" id="megaMenu">
-    <div>
-      <h4>Free tools</h4>
-      <a href="/resources/">
-        <strong>Ad Buddy</strong>
-        <span>Ad ROI calculator</span>
-      </a>
-      <a href="/resources/cac-payback-calculator/">
-        <strong>CAC Payback Calculator</strong>
-        <span>LTV/CAC and payback period</span>
-      </a>
-    </div>
-  </div>
-</li>
-
-<li><a href="/blog/">Blog</a></li>
+    <li class="res-wrap">
+      <button class="res-trigger" type="button">Free GTM Tools ▾</button>
+      <div class="mega">
+        <div>
+          <h4>Free tools</h4>
+          <a href="/free-gtm-tools/">
+            <strong>All Free GTM Tools</strong>
+            <span>Browse the full tool hub</span>
+          </a>
+          <a href="/free-gtm-tools/ad-roi/">
+            <strong>Ad Buddy</strong>
+            <span>Ad ROI calculator</span>
+          </a>
+          <a href="/free-gtm-tools/cac-payback/">
+            <strong>CAC Payback Calculator</strong>
+            <span>LTV/CAC and payback period</span>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li><a href="/blog/">Blog</a></li>
   </ul>
   <button class="mobile-menu-btn" id="mobileBtn" type="button">Menu ☰</button>
   <a href="/#contact" class="ncta">Get in touch →</a>
@@ -401,8 +421,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="/#experience">Experience</a>
   <a href="/#skills">Skills</a>
   <a href="/#contact">Contact</a>
-  <a href="/resources/">Ad Buddy</a>
-  <a href="/resources/cac-payback-calculator/">CAC Payback Calculator</a>
+  <a href="/free-gtm-tools/">Free GTM Tools</a>
+  <a href="/free-gtm-tools/ad-roi/">Ad Buddy</a>
+  <a href="/free-gtm-tools/cac-payback/">CAC Payback Calculator</a>
   <a href="/blog/">Blog</a>
 </div>
 
