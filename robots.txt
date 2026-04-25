@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arafen.netlify.app/sitemap.xml
+Sitemap: https://arafen.pages.dev/sitemap.xml
