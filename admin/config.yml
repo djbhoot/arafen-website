@@ -16,6 +16,7 @@ collections:
     extension: "md"
     format: "frontmatter"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Layout Tag", name: "tags", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "SEO Title", name: "seoTitle", widget: "string", required: false }
