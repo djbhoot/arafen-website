@@ -1,4 +1,5 @@
 ---
+layout: base.njk
 tags: blog
 title: My First CMS Test Post
 seoTitle: My First CMS Test Post | Arafen
