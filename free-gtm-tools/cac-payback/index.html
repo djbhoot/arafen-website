@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAC Payback Calculator</title>
+<link rel="icon" href="/favicon.png">
+<style>
+body{font-family:Inter,sans-serif;background:#f8fafc;padding:40px}input{padding:10px;margin:5px;width:200px}button{padding:10px 20px;background:#3E3691;color:#fff;border:none;border-radius:6px;cursor:pointer}.card{background:#fff;padding:30px;border-radius:16px;max-width:600px;margin:auto;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>CAC Payback Calculator</h1>
+<input id="cac" placeholder="CAC ($)">
+<input id="arpa" placeholder="Monthly Revenue ($)">
+<input id="margin" placeholder="Gross Margin %">
+<br><br>
+<button onclick="calc()">Calculate</button>
+<p id="result"></p>
+</div>
+<script>
+function calc(){
+let cac=parseFloat(document.getElementById('cac').value)||0;
+let arpa=parseFloat(document.getElementById('arpa').value)||0;
+let margin=parseFloat(document.getElementById('margin').value)/100||0;
+let payback=(arpa*margin)?(cac/(arpa*margin)).toFixed(1):0;
+document.getElementById('result').innerText=`Payback Period: ${payback} months`;
+}
+</script>
+</body>
+</html>
