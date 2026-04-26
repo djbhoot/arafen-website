@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ seoTitle or title or "Arafen Kabir Shovon" }}</title>
+  <meta name="description" content="{{ description or 'Growth marketing, GTM strategy, SEO, content, and free tools for B2B marketers.' }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
+  <meta property="og:title" content="{{ seoTitle or title or 'Arafen Kabir Shovon' }}">
+  <meta property="og:description" content="{{ description or 'Growth marketing, GTM strategy, SEO, content, and free tools for B2B marketers.' }}">
+  {% if featuredImage %}<meta property="og:image" content="{{ featuredImage }}">{% endif %}
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.png">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/resources/">Resources</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <p>© 2026 Arafen Kabir Shovon. All rights reserved.</p>
+  </footer>
+</body>
+</html>
