@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("_site/**");
   eleventyConfig.ignores.add("node_modules/**");
   eleventyConfig.ignores.add("MIGRATION_NOTES.md");
+  eleventyConfig.ignores.add("src/index.njk");
 
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("IMG_1256.jpg");
@@ -16,6 +17,7 @@ module.exports = function (eleventyConfig) {
       includes: "src/_includes",
       output: "_site"
     },
+    templateFormats: ["html", "md", "njk"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk"
   };
