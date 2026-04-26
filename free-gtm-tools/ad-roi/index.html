@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ad ROI Calculator</title>
+<link rel="icon" href="/favicon.png">
+<style>
+body{font-family:Inter,sans-serif;background:#f8fafc;padding:40px}input{padding:10px;margin:5px;width:200px}button{padding:10px 20px;background:#3E3691;color:#fff;border:none;border-radius:6px;cursor:pointer}.card{background:#fff;padding:30px;border-radius:16px;max-width:600px;margin:auto;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Ad ROI Calculator</h1>
+<p>Calculate ROI and profit from your ad campaigns.</p>
+<input id="spend" placeholder="Ad Spend ($)">
+<input id="revenue" placeholder="Revenue ($)">
+<br><br>
+<button onclick="calc()">Calculate</button>
+<p id="result"></p>
+</div>
+<script>
+function calc(){
+let spend=parseFloat(document.getElementById('spend').value)||0;
+let revenue=parseFloat(document.getElementById('revenue').value)||0;
+let profit=revenue-spend;
+let roi=spend?((profit/spend)*100).toFixed(2):0;
+document.getElementById('result').innerText=`Profit: $${profit} | ROI: ${roi}%`;
+}
+</script>
+</body>
+</html>
