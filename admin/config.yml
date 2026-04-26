@@ -2,6 +2,7 @@ backend:
   name: github
   repo: djbhoot/arafen-website
   branch: decap-11ty-migration
+  base_url: https://decap-cms-oauth.netlify.app
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
