@@ -438,30 +438,21 @@ footer p{color:var(--text-3);font-size:13px;}
 <!-- BLOG CONTENT -->
 <div class="blog-main">
 
-  <!-- FEATURED -->
-  <a href="/blog/b2b-gtm-strategy-framework/" class="featured-post rv d1" data-category="gtm">
-    <div class="featured-img">
-      <div class="featured-img-inner">
-        <div class="featured-img-decor"></div>
-        <div class="featured-img-icon">🚀</div>
-      </div>
+<a href="/blog/b2b-gtm-strategy-framework/" class="post-card rv d1" data-category="gtm">
+  <div class="post-card-img" style="background:linear-gradient(135deg,rgba(99,179,237,.08),rgba(79,209,197,.06));">
+    <div class="post-card-img-decor"></div>
+    <div class="post-card-icon">🚀</div>
+  </div>
+  <div class="post-card-body">
+    <div class="post-cat cat-gtm">GTM Strategy</div>
+    <h3 class="post-card-title">How to Build a B2B GTM Strategy from Scratch: The Framework I Use at Every Stage</h3>
+    <p class="post-card-excerpt">Most early-stage SaaS companies jump into tactics before answering the foundation: who is the ICP, what motion fits the product, and how acquisition, retention, and expansion connect.</p>
+    <div class="post-card-footer">
+      <span class="post-card-meta">April 2025 · 9 min read</span>
+      <span class="post-card-arrow">→</span>
     </div>
-    <div class="featured-content">
-      <div>
-        <div class="featured-badge">✦ Featured post</div>
-        <div class="post-cat-badge post-cat cat-gtm">GTM Strategy</div>
-        <h2 class="featured-post-title">How to Build a B2B GTM Strategy from Scratch: The Framework I Use at Every Stage</h2>
-        <p class="featured-post-excerpt">Most early-stage SaaS companies jump into tactics before they've answered the foundational questions: who is the ICP, what motion fits the product, and how do acquisition, retention, and expansion interconnect. Here's the full framework I use to build GTM from the ground up.</p>
-      </div>
-      <div>
-        <div class="post-meta">
-          <span class="post-date">April 2025</span>
-          <span class="post-read">· 9 min read</span>
-        </div>
-        <div class="post-read-link" style="margin-top:14px;">Read article →</div>
-      </div>
-    </div>
-  </a>
+  </div>
+</a>
 
   <!-- POST GRID -->
   <div class="post-grid">
@@ -658,7 +649,6 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
 
 /* FILTERS */
 const cards=[...document.querySelectorAll('.post-card')];
-const featured=document.querySelector('.featured-post');
 document.querySelectorAll('.ftag').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.ftag').forEach(b=>b.classList.remove('on'));
@@ -668,10 +658,6 @@ document.querySelectorAll('.ftag').forEach(btn=>{
       const cat=c.dataset.category;
       c.style.display=(f==='all'||cat===f)?'flex':'none';
     });
-    if(featured){
-      const fcat=featured.dataset.category;
-      featured.style.display=(f==='all'||fcat===f)?'grid':'none';
-    }
   });
 });
 
