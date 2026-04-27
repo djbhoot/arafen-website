@@ -373,16 +373,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="/#skills">Skills</a></li>
     <li><a href="/#contact">Contact</a></li>
 
-<li class="res-wrap" id="resourcesMenu">
-  <button class="res-trigger" id="resourcesTrigger" type="button">Resources ▾</button>
+<li class="res-wrap" id="toolsMenu">
+  <button class="res-trigger" id="toolsTrigger" type="button">Free GTM Tools ▾</button>
   <div class="mega" id="megaMenu">
     <div>
       <h4>Free tools</h4>
-      <a href="/resources/">
+      <a href="/free-gtm-tools/">
+        <strong>All Free Tools</strong>
+        <span>Browse the full GTM tools hub</span>
+      </a>
+      <a href="/free-gtm-tools/ad-roi/">
         <strong>Ad Buddy</strong>
         <span>Ad ROI calculator</span>
       </a>
-      <a href="/resources/cac-payback-calculator/">
+      <a href="/free-gtm-tools/cac-payback/">
         <strong>CAC Payback Calculator</strong>
         <span>LTV/CAC and payback period</span>
       </a>
@@ -401,8 +405,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="/#experience">Experience</a>
   <a href="/#skills">Skills</a>
   <a href="/#contact">Contact</a>
-  <a href="/resources/">Ad Buddy</a>
-  <a href="/resources/cac-payback-calculator/">CAC Payback Calculator</a>
+  <a href="/free-gtm-tools/">All Free Tools</a>
+  <a href="/free-gtm-tools/ad-roi/">Ad Buddy</a>
+  <a href="/free-gtm-tools/cac-payback/">CAC Payback Calculator</a>
   <a href="/blog/">Blog</a>
 </div>
 
@@ -812,10 +817,10 @@ document.querySelectorAll('.stab').forEach(tab=>{
 });
 
 
-/* RESOURCES MEGA MENU + MOBILE MENU */
+/* FREE GTM TOOLS MEGA MENU + MOBILE MENU */
 (function(){
-  const wrap=document.getElementById('resourcesMenu');
-  const trigger=document.getElementById('resourcesTrigger');
+  const wrap=document.getElementById('toolsMenu');
+  const trigger=document.getElementById('toolsTrigger');
   const mobileBtn=document.getElementById('mobileBtn');
   const mobilePanel=document.getElementById('mobilePanel');
   let timer;
