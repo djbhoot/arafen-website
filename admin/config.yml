@@ -2,7 +2,7 @@ backend:
   name: github
   repo: djbhoot/arafen-website
   branch: decap-11ty-migration
-  auth_endpoint: https://api.netlify.com/auth
+  base_url: https://decap-oauth.arafen-shovon.workers.dev
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
