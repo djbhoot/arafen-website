@@ -839,5 +839,138 @@ document.querySelectorAll('.stab').forEach(tab=>{
 })();
 
 </script>
+  
+  <!-- WORK + CONTACT FLOATING STARS PATCH -->
+<style>
+  .wc-star-layer{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    overflow:hidden;
+  }
+
+  .wc-star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:rgba(180,225,255,.72);
+    box-shadow:
+      0 0 12px rgba(99,179,237,.72),
+      0 0 22px rgba(79,209,197,.25);
+    animation:
+      wcFloat var(--wc-dur,18s) ease-in-out infinite alternate,
+      wcBlink var(--wc-blink,4.8s) ease-in-out infinite;
+    opacity:.55;
+  }
+
+  .wc-star.big{
+    width:4px;
+    height:4px;
+    box-shadow:
+      0 0 18px rgba(99,179,237,.9),
+      0 0 34px rgba(183,148,244,.28);
+  }
+
+  .wc-star.tiny{
+    width:2px;
+    height:2px;
+    opacity:.45;
+  }
+
+  @keyframes wcFloat{
+    0%{
+      transform:translate3d(0,0,0) scale(.9);
+    }
+    50%{
+      transform:translate3d(var(--wc-x,28px),var(--wc-y,-42px),0) scale(1.15);
+    }
+    100%{
+      transform:translate3d(
+        calc(var(--wc-x,28px) * -0.45),
+        calc(var(--wc-y,-42px) * .65),
+        0
+      ) scale(1);
+    }
+  }
+
+  @keyframes wcBlink{
+    0%,100%{
+      opacity:.28;
+    }
+    45%{
+      opacity:.92;
+    }
+    65%{
+      opacity:.55;
+    }
+  }
+
+  #experience,
+  #contact{
+    position:relative;
+    overflow:hidden;
+  }
+
+  #experience > :not(.wc-star-layer),
+  #contact > :not(.wc-star-layer){
+    position:relative;
+    z-index:2;
+  }
+</style>
+
+<script>
+(function(){
+  function createLayer(sectionId, count){
+    const section = document.getElementById(sectionId);
+    if(!section) return;
+
+    const oldLayer = section.querySelector('.wc-star-layer');
+    if(oldLayer) oldLayer.remove();
+
+    const layer = document.createElement('div');
+    layer.className = 'wc-star-layer';
+    section.prepend(layer);
+
+    const sectionHeight = Math.max(section.offsetHeight, 420);
+
+    for(let i = 0; i < count; i++){
+      const star = document.createElement('span');
+
+      star.className = 'wc-star ' + (
+        i % 7 === 0 ? 'big' :
+        i % 5 === 0 ? 'tiny' :
+        ''
+      );
+
+      star.style.left = (Math.random() * 96 + 2) + '%';
+      star.style.top = (Math.random() * sectionHeight) + 'px';
+      star.style.setProperty('--wc-dur', (14 + Math.random() * 16) + 's');
+      star.style.setProperty('--wc-blink', (3.8 + Math.random() * 3.4) + 's');
+      star.style.setProperty('--wc-x', ((Math.random() * 70) - 35) + 'px');
+      star.style.setProperty('--wc-y', (-(30 + Math.random() * 80)) + 'px');
+      star.style.animationDelay = (-Math.random() * 10) + 's';
+
+      layer.appendChild(star);
+    }
+  }
+
+  function buildStars(){
+    createLayer('experience', 24);
+    createLayer('contact', 16);
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', buildStars);
+  } else {
+    buildStars();
+  }
+
+  window.addEventListener('resize', buildStars);
+})();
+</script>
+<!-- END WORK + CONTACT FLOATING STARS PATCH -->
+  
 </body>
 </html>
