@@ -16,6 +16,71 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
 
   gtag('config', 'G-C18F6Q8BGH');
+
+/* === FINAL SECTION STAR CONTROL === */
+#stars{
+  opacity:1;
+  transition:opacity .3s ease;
+}
+
+#about,
+#skills{
+  position:relative;
+  background:var(--bg);
+}
+
+#experience,
+#contact{
+  position:relative;
+  overflow:hidden;
+}
+
+.section-star-layer{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.section-star{
+  position:absolute;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:rgba(180,225,255,.8);
+  box-shadow:0 0 12px rgba(99,179,237,.8),0 0 22px rgba(79,209,197,.25);
+  animation:sectionStarFloat 16s ease-in-out infinite alternate, sectionStarBlink 5s ease-in-out infinite;
+}
+
+.section-star.big{
+  width:4px;
+  height:4px;
+}
+
+.section-star.tiny{
+  width:2px;
+  height:2px;
+}
+
+@keyframes sectionStarFloat{
+  0%{transform:translate3d(0,0,0) scale(.9);}
+  50%{transform:translate3d(var(--sx,25px),var(--sy,-45px),0) scale(1.15);}
+  100%{transform:translate3d(calc(var(--sx,25px) * -0.45),calc(var(--sy,-45px) * .65),0) scale(1);}
+}
+
+@keyframes sectionStarBlink{
+  0%,100%{opacity:.28;}
+  45%{opacity:.95;}
+  65%{opacity:.55;}
+}
+
+#experience > :not(.section-star-layer),
+#contact > :not(.section-star-layer){
+  position:relative;
+  z-index:2;
+}
+  
 </script>
   <meta name="google-site-verification" content="wIZoZsC-TNFy6x1RZaeyEqtfmnN7LiiAF6y6MojaE0k" />
 <meta charset="UTF-8">
@@ -1090,6 +1155,78 @@ document.querySelectorAll('.stab').forEach(tab=>{
 })();
 </script>
 <!-- END SECTION-SAFE STARS PATCH -->
+
+<script>
+(function(){
+  const hideCanvasIn = ['about','skills'];
+
+  function isMiddleInside(el){
+    const rect = el.getBoundingClientRect();
+    const middle = window.innerHeight / 2;
+    return rect.top <= middle && rect.bottom >= middle;
+  }
+
+  function controlGlobalCanvas(){
+    const canvas = document.getElementById('stars');
+    if(!canvas) return;
+
+    const shouldHide = hideCanvasIn.some(id => {
+      const el = document.getElementById(id);
+      return el && isMiddleInside(el);
+    });
+
+    canvas.style.opacity = shouldHide ? '0' : '1';
+  }
+
+  function createSectionStars(sectionId, count){
+    const section = document.getElementById(sectionId);
+    if(!section) return;
+
+    const oldLayer = section.querySelector('.section-star-layer');
+    if(oldLayer) oldLayer.remove();
+
+    const layer = document.createElement('div');
+    layer.className = 'section-star-layer';
+    section.prepend(layer);
+
+    const sectionHeight = Math.max(section.offsetHeight, 420);
+
+    for(let i = 0; i < count; i++){
+      const star = document.createElement('span');
+
+      star.className = 'section-star ' + (
+        i % 7 === 0 ? 'big' :
+        i % 5 === 0 ? 'tiny' :
+        ''
+      );
+
+      star.style.left = (Math.random() * 96 + 2) + '%';
+      star.style.top = (Math.random() * sectionHeight) + 'px';
+      star.style.setProperty('--sx', ((Math.random() * 70) - 35) + 'px');
+      star.style.setProperty('--sy', (-(30 + Math.random() * 80)) + 'px');
+      star.style.animationDuration = (14 + Math.random() * 10) + 's, ' + (4 + Math.random() * 3) + 's';
+      star.style.animationDelay = (-Math.random() * 10) + 's';
+
+      layer.appendChild(star);
+    }
+  }
+
+  function initSectionStars(){
+    createSectionStars('experience', 26);
+    createSectionStars('contact', 18);
+    controlGlobalCanvas();
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initSectionStars);
+  } else {
+    initSectionStars();
+  }
+
+  window.addEventListener('scroll', controlGlobalCanvas, { passive:true });
+  window.addEventListener('resize', initSectionStars);
+})();
   
+</script>  
 </body>
 </html>
